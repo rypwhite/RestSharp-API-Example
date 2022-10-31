@@ -22,7 +22,7 @@ if (!isset($_GET["username"]) || $_GET["username"] == null) {
 
 $username = $_GET["username"];
 
-$connect = new mysqli("plesk.remote.ac","WS301022_csdp","U1f6x1g1@","WS301022_csdp");
+$connect = new mysqli("localhost","user","pass","db");
 $SQL = "SELECT * FROM `users` WHERE `username` = ?";
 
 $stmt = mysqli_prepare($connect, $SQL);
